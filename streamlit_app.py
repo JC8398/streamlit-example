@@ -18,13 +18,14 @@ forums](https://discuss.streamlit.io).
 In the meantime, below is an example of what you can do with just a few lines of code:
 """
 
-interesting = st.checkbox('Interesting')
-save = st.checkbox('Save')
+#interesting = st.checkbox('Interesting')
+#save = st.checkbox('Save')
 
 data = {'Source': ['BBCM', 'Janes', 'Secret', 'Cardinal'],
-        'Relevance':[0.6, 0.7, 0.98, 0.3],
-        'Interesting': [interesting, interesting, interesting, interesting],
-        'Saved': [save, save, save, save]}
+        'Relevance':[0.6, 0.7, 0.98, 0.3]
+        #'Interesting': [interesting, interesting, interesting, interesting],
+        #'Saved': [save, save, save, save]
+       }
 
 df = pd.DataFrame(data)
 gd = GridOptionsBuilder.from_dataframe(df)
