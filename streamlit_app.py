@@ -4,6 +4,8 @@ import math
 import pandas as pd
 import streamlit as st
 import numpy as np
+from st_aggrid import AgGrid, GridUpdateMode
+from st_aggrid.grid_options_builder import GridOptionsBuilder
 
 """
 # Welcome to Streamlit!
@@ -22,4 +24,15 @@ data = {'Source': ['BBCM', 'Janes', 'Secret', 'Cardinal'],
         'Relevance':[0.6, 0.7, 0.98, 0.3],
         'User input': [interesting, interesting, interesting, interesting]}
 
-st.write(pd.DataFrame(data))
+df = pd.DataFrame(data)
+gd = GridOptionsBuilder.from_dataframe(df)
+gd.configure_selection(selection_mode='multiple', use_checkbox=True)
+gridoptions = gd.build()
+
+grid_table = AgGrid(df, height=250, gridOptions=gridoptions,
+                    update_mode=GridUpdateMode.SELECTION_CHANGED)
+
+st.write('## Selected')
+selected_row = grid_table["selected_rows"]
+st.dataframe(selected_row)
+
