@@ -18,6 +18,8 @@ In the meantime, below is an example of what you can do with just a few lines of
 
 interesting = st.checkbox('Interesting')
 
-st.write(pd.DataFrame({'Source': ['BBCM', 'Janes', 'Secret', 'Cardinal'],
-                   'Relevance':[0.6, 0.7, 0.98, 0.3],
-                      'User input': [interesting, interesting, interesting, interesting]}))
+data = {'Source': ['BBCM', 'Janes', 'Secret', 'Cardinal'],
+        'Relevance':[0.6, 0.7, 0.98, 0.3],
+        'User input': [interesting, interesting, interesting, interesting]}
+
+st.write(pd.DataFrame(data))
