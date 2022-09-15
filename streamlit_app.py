@@ -17,7 +17,5 @@ In the meantime, below is an example of what you can do with just a few lines of
 """
 
 
-df = pd.DataFrame({'first column': ['BBCM', 'Janes', 'Secret', 'Cardinal'],
-                   'second column':[np.random.randn(0,1), np.random.randn(0,1), np.random.randn(0,1), np.random.randn(0,1)]})
-
-df
+st.write(pd.DataFrame({'first column': ['BBCM', 'Janes', 'Secret', 'Cardinal'],
+                   'second column':[np.random.randn(0,1), np.random.randn(0,1), np.random.randn(0,1), np.random.randn(0,1)]}))
