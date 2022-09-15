@@ -24,7 +24,7 @@ save = st.checkbox('Save')
 data = {'Source': ['BBCM', 'Janes', 'Secret', 'Cardinal'],
         'Relevance':[0.6, 0.7, 0.98, 0.3],
         'Interesting': [interesting, interesting, interesting, interesting]
-        'Save': [save, save, save, save]}
+        'Saved': [save, save, save, save]}
 
 df = pd.DataFrame(data)
 gd = GridOptionsBuilder.from_dataframe(df)
