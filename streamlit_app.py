@@ -18,5 +18,5 @@ In the meantime, below is an example of what you can do with just a few lines of
 
 st.write(pd.DataFrame({'Source': ['BBCM', 'Janes', 'Secret', 'Cardinal'],
                    'Relevance':[0.6, 0.7, 0.98, 0.3],
-                      'User input': [st.checkbox('Interesting'), st.checkbox('Interesting'), st.checkbox('Interesting'), st.checkbox('Interesting')]}))
+                      'User input': [interesting = st.checkbox('Interesting'), interesting = st.checkbox('Interesting'), interesting = st.checkbox('Interesting'), interesting = st.checkbox('Interesting')]}))
                           
